@@ -1,241 +1,410 @@
-<!DOCTYPE html>
-
-
-<html>
+<!doctype html>
+<html lang="en">
 <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <title>Panacea | Clone Wars</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Panacea Game Jam 2022</title>
+    <meta name="description"
+          content="An elegant event from a more civilized age."/>
 
-    <!-- mobile responsive meta -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--Inter UI font-->
+    <link href="https://rsms.me/inter/inter-ui.css" rel="stylesheet">
 
-    <!-- ** Plugins Needed for the Project ** -->
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="./theme/plugins/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="./theme/plugins/fontawesome/css/all.css">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 
-    <!-- Main Stylesheet -->
-    <link href="./theme/css/style.css" rel="stylesheet">
+    <!--vendors styles-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!--Favicon-->
-    <link rel="shortcut icon" href="./theme/images/plogo.png" type="image/x-icon">
-    <link rel="icon" href="./theme/images/plogo .png" type="image/x-icon">
-
+    <!-- Bootstrap CSS / Color Scheme -->
+    <link rel="stylesheet" href="css/default.css" id="theme-color">
 </head>
 <body>
-    <!-- START preloader-wrapper -->
-    <div class="preloader-wrapper">
-        <div class="preloader-inner">
-            <div class="spinner-border text-red"></div>
-        </div>
-    </div>
-    <!-- END preloader-wrapper -->
-    
-    <!-- START main-wrapper -->
-    <section class="d-flex">
-  
-<!-- start of sidenav -->
-<aside><div class="sidenav position-sticky d-flex flex-column justify-content-between">
-    <a class="navbar-brand" href="index.html" class="logo">
-        <img src="./theme/images/Both.png" alt="">
-    </a>
-    <!-- end of navbar-brand -->
 
-    <div class="navbar navbar-dark my-4 p-0 font-primary">
-        <ul class="navbar-nav w-100">
-            <li class="nav-item active">
-                <a class="nav-link text-white px-0 pt-0" href="index.html">Home</a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link text-white px-0" href="https://forms.gle/VMaaWpZqauFRjSD7A">Sign Up Form</a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link text-white px-0" href="#sutte">Contact Information</a>
-            </li>
-            <li class="nav-item  accordion">
-                <div id="drop-menu" class="drop-menu collapse">
-                    <a class="d-block " href="index-2.html">Home</a>
-                    <a class="d-block " href="https://forms.gle/VMaaWpZqauFRjSD7A">Sign Up Form</a>
-                    <a class="d-block " href="#sutte">Contact Information</a>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <!-- end of navbar -->
+<style>
+    @font-face {
+    font-family: "custom-arcade";
+    src: url("./ARCADE_I.TTF");
+}
+.parallax {
+    /* The image used */
+    background-image: url("./img/background.jpg");
+    /* Set a specific height */
+    min-height: 500px;
 
-    <ul class="list-inline nml-2">
-        <li class="list-inline-item">
-            <a href="https://m.facebook.com/profile.php?id=100068643720036&_rdr" class="text-white text-red-onHover p-2">
-                <span class="fab fa-facebook-f"></span>
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+</style>
+<!--navigation-->
+<section class="smart-scroll">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <a class="navbar-brand heading-black" style="font-family: 'Righteous', cursive;" href="index.html">
+                Panacea
             </a>
-        </li>
-        <li class="list-inline-item">
-            <a href="https://www.instagram.com/panacea.muj/" class="text-white text-red-onHover p-2">
-                <span class="fab fa-instagram"></span>
-            </a>
-        </li>
-        <li class="list-inline-item">
-            <a href="https://www.linkedin.com/company/panacea-club/mycompany/" class="text-white text-red-onHover p-2">
-                <span class="fab fa-linkedin-in"></span>
-            </a>
-        </li>
-    </ul>
-    <!-- end of social-links -->
-</div></aside>
-<!-- end of sidenav -->
-    <div class="main-content">
-        <!-- start of mobile-nav -->
-<header class="mobile-nav pt-4">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-6">
-                <a href="index.html">
-                    <img src="./theme/images/both.png" alt="">
-                </a>
+            <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
+                    data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span data-feather="grid"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#features">Steps</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#pricing">Dates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#faq">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#blog">Panacea</a>
+                    </li>
+                </ul>
             </div>
-            <div class="col-6 text-right">
-                <button class="nav-toggle bg-transparent border text-white">
-                    <span class="fas fa-bars"></span>
+        </nav>
+    </div>
+</section>
+<!--hero header-->
+<section class="py-7 py-md-0 bg-hero parallax" id="home">
+    <div class="container">
+        <div class="row vh-md-100">
+            <div class="col-md-8 col-sm-10 col-12 mx-auto my-auto text-center">
+                <h1 style="font-size:5vw;font-family:custom-arcade;"  data-aos="zoom-in">PANACEA GAME JAM 2022</h1>
+                <p class="heading-black py-3">SIGN UP AND BEGIN YOUR GAME MAKING QUEST</p>
+                <button class="btn btn-primary d-inline-flex flex-row align-items-center">
+                    Register
+                    <em class="ml-2" data-feather="arrow-right"></em>
                 </button>
             </div>
         </div>
     </div>
-</header>
-<div class="nav-toggle-overlay"></div>
-<!-- end of mobile-nav -->
+</section>
 
-        <div class="container pt-4 mt-5">
-            <div class="row justify-content-between">
-                <div class="col-lg-7">
-                    <div class="card post-item bg-transparent border-0 mb-5">
-                        <a href="#">
-                            <img class="card-img-top rounded-0" src="./theme/images/Title.png" alt="">
-                        </a>
-                        <div class="card-body px-0" >
-                            <h2 class="card-title">
-                                <span style="color:#86A8E7;">Panacea</span>, the official club of the School of Computer and Communication Engineering, MUJ presents : <span style="font-weight:900;color:#ead815">Clone Wars</span>
-                            </h2>
-                            <p class="card-text my-4" style="font-size:19px;">
-                                🌟 This hands on workshop will lay the foundation for your journey in Git and how to contribute code to a repository  <br><br>
-                                🌟 All contributions submitted to the repository count towards contributing in Hacktoberfest<br><br>    
-                                🌟 Don't worry! Our moderation team will be there for every doubt, every pull and every push along the way 👩🏻‍💻
-                            </p>
-                        </div>
-                    </div>
-                    <!-- end of post-item -->
-                    
-                    <!-- end of post-item -->
-                </div>
-                <div class="col-lg-4 col-md-5" >
-                    <div class="widget text-center">
-                        <a href="https://hacktoberfest.com/">
-                        <img class="author-thumb-sm  d-block mx-auto" src="./theme/images/Hfest-Logo-2-Color-Manga.png" alt="">
-
-                        </a>
-                        <h2 class="widget-title text-white d-inline-block mt-4">Event Details</h2>
-                        <p class="mt-4" style="text-align:left;font-size: large;font-weight:800;">
-                            🗓️ Date : 4th October <br>
-                            🕚 Time : 12:45 PM - 2:30 PM <br>
-                            🏫 Venue : Room No. 307, AB1 <br>
-                        </p>
-                        <ul class="list-inline mt-3">
-                            <li class="list-inline-item">
-                                <a href="https://m.facebook.com/profile.php?id=100068643720036&_rdr" class="text-white text-primary-onHover p-2">
-                                    <span class="fab fa-facebook-f"></span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="https://www.instagram.com/panacea.muj/" class="text-white text-primary-onHover p-2">
-                                    <span class="fab fa-instagram"></span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="https://www.linkedin.com/company/panacea-club/mycompany/" class="text-white text-primary-onHover p-2">
-                                    <span class="fab fa-linkedin-in"></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- end of author-widget -->
-
-                    <div class="widget bg-dark p-4 text-center">
-                        <h2 class="widget-title text-white d-inline-block mt-4">Sign Up for the Event</h2>
-                        <p class="mt-4" style="font-weight:800;">Fill in the form below to join the event</p>
-                        <br>
-                            <div class="form-group">
-                                <a href="https://forms.gle/VMaaWpZqauFRjSD7A">
-                                    <button class="btn btn-primary">Sign Up <img src="./theme/images/arrow-right.png" alt=""></button>
-                                </a>
+<!-- features section -->
+<section class="pt-6 pb-7" id="features">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto text-center"  data-aos="zoom-in">
+                <h2 class="heading-black" >Indie Game Dev Mania</h2>
+                <p class="text-muted lead">4 Slides, 3 Finalists, 2 days and 1 Epic Quest</p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-10 mx-auto">
+                <div class="row feature-boxes">
+                    <div class="col-md-6 box"  data-aos="fade-down-right">
+                        <div class="icon-box box-primary">
+                            <div class="icon-box-inner">
+                                <span data-feather="cloud-lightning" width="35" height="35"></span>
                             </div>
+                        </div>
+                        <h5>Ideate. Discuss. Collaborate.</h5>
+                        <p class="text-muted"> Think about the theme, consider your options and make a development strategy</p>
                     </div>
-                    <!-- end of subscription-widget -->
-
-                    <div class="widget">
-                        
-                        <!-- end of widget-post-item -->
+                    <div class="col-md-6 box"  data-aos="fade-down-left">
+                        <div class="icon-box box-success">
+                            <div class="icon-box-inner">
+                                <span data-feather="terminal" width="35" height="35"></span>
+                            </div>
+                        </div>
+                        <h5>Code. Prototype. Bugfix.</h5>
+                        <p class="text-muted">Code your ideas, play test your creations and fix all the glitches.</p>
                     </div>
-                    <!-- end of post-items widget -->
+                    <div class="col-md-6 box"  data-aos="fade-up-right">
+                        <div class="icon-box box-danger">
+                            <div class="icon-box-inner">
+                                <span data-feather="upload-cloud" width="35" height="35"></span>
+                            </div>
+                        </div>
+                        <h5>Finalize. Export. Upload.</h5>
+                        <p class="text-muted">Create your final iterations and export your game. Add your documentation and instructions, and then upload to itch.io</p>
+                    </div>
+                    <div class="col-md-6 box"  data-aos="fade-up-left">
+                        <div class="icon-box box-info">
+                            <div class="icon-box-inner">
+                                <span data-feather="layout" width="35" height="35"></span>
+                            </div>
+                        </div>
+                        <h5>Explain. Present. Win.</h5>
+                        <p class="text-muted">Make a 4 slide presentation explaining your development process,game features,sources and images/footage. Pitch your game idea and win the competition.</p>
+                    </div>
                 </div>
             </div>
         </div>
+        <hr>
+        <div class="row mt-6">
+            <div class="col-md-6 mr-auto "  data-aos="fade-right">
+                <h2>This is more than just a Game Jam</h2>
+                <p class="mb-5" style="font-size:18px">Memberships for Panacea are now open!<br> Join the official club of the school of computer and communication engineering</p>
+                <a href="#" class="btn btn-light">
+                    Join the Club
+                </a>
+            </div>
+            <div class="col-md-5"  data-aos="fade-left">
+                <div style="margin-top:-60px;">
+                    <img src="img/Logo.png" class="img-fluid rounded d-block mx-auto" alt="Work 1"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-        <!-- start of footer -->
-<footer class="bg-dark" style="margin-top:90px;">
+<!--pricing section-->
+<section class="py-7 bg-dark section-angle top-right bottom-right parallax" id="pricing">
     <div class="container">
-        <div class="row text-center">
-            <div class="col-lg-3 col-sm-6 mb-5">
-                <h5 class="font-primary text-white mb-4"></h5>
-                <ul class="list-unstyled">
-                    <li>
-                        <img src="./theme/images/Both.png" style="height:120px;">
+        <div class="row">
+            <div class="col-md-6 mx-auto text-center">
+            </div>
+        </div>
+        <!--pricing tables-->
+        <div class="row pt-5 pricing-table">
+            <div class="col-12 mx-auto">
+                <div class="card-deck pricing-table">
+                    <div class="card" style="border-radius:30px;"  data-aos="fade-up">
+                        <div class="card-body">
+                            <h3 class="card-title pt-3">19:00</h3>
+                            <h2 class="card-title text-primary mb-0 pt-4">Day 1</h2>
+                            <div class="font-weight-medium mt-2">Friday, 4<sup>rth</sup> November</div>
+                            <ul class="list-unstyled pricing-list">
+                                <li>Theme is released and the event begins! You now have 48 hours to complete your game. <br> <br>Spend your time wisely and start imagining your perfect game idea. </li>
+                            </ul>
+                            <br><br>
+                            <a href="#" class="btn btn-primary">
+                                -->
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card"  style="border-radius:30px;"  data-aos="fade-up">
+                        <div class="card-body">
+                            <h3 class="card-title pt-3">19:00</h3>
+                            <h2 class="card-title text-info mb-0 pt-4">Day 3</h2>
+                            <div class="font-weight-medium mt-2">Sunday, 6<sup>th</sup> November</div>
+                            <ul class="list-unstyled pricing-list">
+                                <li>The countdown ends. Make sure you have uploaded your projects to itch.io and get started on your presentations.
+                                    <br><br>
+                                    You've done it! You've made a game in 48 hours. Now it's time to present your game to the judges and win the competition.
+                                    </li>
+                            </ul>
+                            <a href="#" class="btn btn-info">
+                                -->
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card"  style="border-radius:30px;"  data-aos="fade-up">
+                        <div class="card-body">
+                            <h3 class="card-title pt-3">23:30</h3>
+                            <h2 class="card-title text-primary mb-0 pt-4">Day 3</h2>
+                            <div class="font-weight-medium mt-2">Sunday, 6<sup>th</sup> November</div>
+                            <ul class="list-unstyled pricing-list">
+                                <li>
+                                    Give us four well designed slides with your development process, features,sources and screengrabs of your game. <br><br>
+                                    Our panel of judges will go through your submissions and slides and pick the winners.
+                                </li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">
+                            -->
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-6">
+            <div class="col-md-4 mr-auto">
+                
+            </div>
+            <div class="col-md-7 offset-md-1">
+               
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-8 col-12 divider top-divider mx-auto pt-5 text-center">
+                <button class="btn btn-primary">
+                    Sign Up Now
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--faq section-->
+<section class="py-7" id="faq">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto text-center">
+                <h2>Frequently asked questions</h2>
+                <p class="text-muted lead">Answers to most common questions.</p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-10 mx-auto">
+                <div class="row">
+                    <div class="col-md-6 mb-5">
+                        <h6>How much does it cost?</h6>
+                        <p class="text-muted">Nam liber tempor cum soluta nobis eleifend option congue nihil imper per tem por legere me doming.</p>
+                    </div>
+                    <div class="col-md-6 mb-5">
+                        <h6>How do I upload to itch.io?</h6>
+                        <p class="text-muted">Nam liber tempor cum soluta nobis eleifend option congue nihil imper per tem por legere me doming.</p>
+                    </div>
+                    <div class="col-md-6 mb-5">
+                        <h6>Can I use an older project?</h6>
+                        <p class="text-muted">Nam liber tempor cum soluta nobis eleifend option congue nihil imper per tem por legere me doming.</p>
+                    </div>
+                    <div class="col-md-6 mb-5">
+                        <h6>What is your copyright policy?</h6>
+                        <p class="text-muted">Nam liber tempor cum soluta nobis eleifend option congue nihil imper per tem por legere me doming.</p>
+                    </div>
+                    <div class="col-md-6 mb-5">
+                        <h6>Can my friends help me?</h6>
+                        <p class="text-muted">Nam liber tempor cum soluta nobis eleifend option congue nihil imper per tem por legere me doming.</p>
+                    </div>
+                    <div class="col-md-6 mb-5">
+                        <h6>How can I contact you?</h6>
+                        <p class="text-muted">Nam liber tempor cum soluta nobis eleifend option congue nihil imper per tem por legere me doming.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6 mx-auto text-center">
+                <h5 class="mb-4">Have questions?</h5>
+                <a href="#" class="btn btn-primary">Contact us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--news section-->
+<section class="py-7 bg-dark section-angle top-left bottom-left" id="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto text-center">
+                <h2 class="heading-black">Latest from Panacea</h2>
+                <p class="text-muted lead">What's new at the club.</p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="card">
+                    <a href="#">
+                        <img class="card-img-top img-raised" src="img/blog-1.jpg" alt="Blog 1">
+                    </a>
+                    <div class="card-body">
+                        <a href="#" class="card-title mb-2"><h5>We launch new iOS & Android mobile apps</h5></a>
+                        <p class="text-muted small-xl mb-2">Sep 27, 2018</p>
+                        <p class="card-text">Nam liber tempor cum soluta nobis eleifend option congue nihil imper,
+                            consectetur adipiscing elit. <a href="#">Learn more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <a href="#">
+                        <img class="card-img-top img-raised" src="img/blog-2.jpg" alt="Blog 2">
+                    </a>
+                    <div class="card-body">
+                        <a href="#" class="card-title mb-2"><h5>New update is available for the editor</h5></a>
+                        <p class="text-muted small-xl mb-2">August 16, 2018</p>
+                        <p class="card-text">Nam liber tempor cum soluta nobis eleifend option congue nihil imper,
+                            consectetur adipiscing elit. <a href="#">Learn more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <a href="#">
+                        <img class="card-img-top img-raised" src="img/blog-3.jpg" alt="Blog 3">
+                    </a>
+                    <div class="card-body">
+                        <a href="#" class="card-title mb-2"><h5>The story of building #1 page builder</h5></a>
+                        <p class="text-muted small-xl mb-2">December 2nd, 2017</p>
+                        <p class="card-text">Nam liber tempor cum soluta nobis eleifend option congue nihil imper,
+                            consectetur adipiscing elit. <a href="#">Learn more</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-6">
+            <div class="col-md-6 mx-auto text-center">
+                <a href="#" class="btn btn-primary">View More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<footer class="py-6">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5 mr-auto">
+                <h5>About Panacea</h5>
+                <p class="text-muted">We are the official club of the School of Computer & Communication Engineering at Manipal University Jaipur.</p>
+                <ul class="list-inline social social-sm">
+                    <li class="list-inline-item">
                     </li>
-                    <li><a href="#!"></a></li>
-                    <li><a href="#!"></a></li>
-                    <li><a href="#!"></a></li>
+                    <li class="list-inline-item">
+                        <a href=""><i class="fa fa-linkedin"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href=""><i class="fa fa-instagram"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href=""><i class="fa fa-envelope"></i></a>
+                    </li>
                 </ul>
             </div>
-            <div class="col-lg-3 col-sm-6 mb-5">
-                <h5 class="font-primary text-white mb-4"></h5>
+            <div class="col-sm-2">
                 <ul class="list-unstyled">
-                    <li><a href="#!"></a></li>
-                    <li><a href="#!"></a></li>
-                    <li><a href="#!"></a></li>
-                    <li><a href="#!"></a></li>
                 </ul>
             </div>
-            <div class="col-lg-3 col-sm-6 mb-5">
-                <h5 class="font-primary text-white mb-4"></h5>
+            <div class="col-sm-2">
                 <ul class="list-unstyled">
-                    <li><a href="#!"> </a></li>
-                    <li><a href="#!"></a></li>
-                    <li><a href="#!"></a></li>
-                    <li><a href="#!"></a></li>
                 </ul>
             </div>
-            <div class="col-lg-3 col-sm-6 mb-5" id="sutte">
-                <h5 class="font-primary text-white mb-4" style="font-size:20px">Contact Information</h5>
+            <div class="col-sm-2">
+                <h5>Contacts</h5>
                 <ul class="list-unstyled">
-                    <li>Chhavi:
-                        <a href="tel:918769059678">+91 87690 59678</a></li>
-                    <li>Tanuj: <a href="tel:+919007061199"></a>+91 90070 61199</li>
-                    <li><a href="#!"></a></li>
+                    <li><a href="#">Siddhanth Bhat</a></li>
+                    <li><a href="#">Samyak Jain</a></li>
                 </ul>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-12 text-muted text-center small-xl">
+                &copy; 2022 Panacea - All Rights Reserved
             </div>
         </div>
     </div>
 </footer>
-<!-- end of footer -->
-    </div>
 
-    </section>
-    <!-- END main-wrapper -->
+<!--scroll to top-->
+<div class="scroll-top">
+    <i class="fa fa-angle-up" aria-hidden="true"></i>
+</div>
 
-    <!-- All JS Files -->
-    <script src="./theme/plugins/jQuery/jquery.min.js"></script>
-    <script src="./theme/plugins/bootstrap/bootstrap.min.js"></script>
-
-    <!-- Main Script -->
-    <script src="./theme/js/script.js"></script>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.3/feather.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script src="js/scripts.js"></script>
 </body>
 </html>
