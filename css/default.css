@@ -7852,4 +7852,10 @@ footer h5 {
   .switcher-wrap {
     display: none; } }
 
+.custh1 {
+      background: linear-gradient(to right, #ffffff,
+              #ffffff, #ffffff);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+  }
    
